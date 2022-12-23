@@ -70,7 +70,7 @@ def userLogin(request):
             if user is not None:
                 login(request, user)
                 return redirect('index_page_url')
-            return redirect('index_page_url')
+            return redirect('login_page_url')
             # if user is not None:
             #     return redirect('login_page_url')
             # else:
