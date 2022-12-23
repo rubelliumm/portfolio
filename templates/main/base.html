@@ -31,14 +31,6 @@
 <body>
   {% include 'main/includes/navbar.html' %}
   {% block body %} {% endblock body %}
-  <div class="container text-center">
-    {% if user.is_authenticated %}
-  <p>user authenticated</p>
-  {% else %}
-  <p>user is not authenticated</p>
-  {% endif %}
-  </div>
-  
   <script src="{% static 'js/main.js' %}"></script>
 </body>
 
