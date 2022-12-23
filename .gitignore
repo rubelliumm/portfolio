@@ -1,2 +1,4 @@
 .vscode
 venv1
+__pycache__
+migrations
