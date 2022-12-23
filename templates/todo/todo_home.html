@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+
+{% block title %}todo app{% endblock title %}
+{% block body %}
+{% if user.is_authenticated %}
+<div class="container-fluid mt-3">
+    <div class="row gx-3">
+        <div class="col-3 text-bg-info mx-2">
+            <div class="container">
+                <h2>Create todo listings:</h2>
+                <div class="container">
+                    <form action="{% url 'todo:add_todo_url' %}" method="POST" class="form mb-5">
+                        {% csrf_token %}
+                        {{ form }}
+                        <input class="btn btn-success mt-2" type="submit" value="Add">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-5 text-bg-dark ms-3">
+            <ul class="todoul">
+                {% for todo in todo %}
+                <li>
+                    <div class="todo">
+                        {{ todo.name }} - {{ todo.importance }}<a href="{% url 'todo:edit_todo_url' todo.pk %}"><i class="fa-solid fa-pen-to-square"></i></a><a href="{% url 'todo:delete_todo_url' todo.pk %}"><i class="fa-solid fa-trash-can"></i></a>
+                        <hr>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <button class="ms-3 mt-5" type="submit">See more</button>
+        </div>
+        <div class="col-sm-3 text-bg-dark ms-3">
+            <h3 class="primary"> top 5 most important todos:</h3>
+                <ul class="todoul">
+                {% for todo in imp_todo %}
+                <li>
+                    <div class="todo">
+                        {{ todo.name }} - {{ todo.importance }}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% else %}
+<p>You must login to add a Todo</p>
+{% endif %}
+
+{% endblock body %}

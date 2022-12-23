@@ -1,0 +1,89 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title%}Rubelliumm-about{% endblock title %}
+{% block body %}
+
+<div class="container-fluid">
+  <div class="row">
+    <h1><u>ABOUT ME</u></h1>
+  </div>
+  <div class="row about">
+    <div class="col-lg-4">
+      <!-- put your photo here... -->
+      <img class="img-fluid row-sm" src="{% static 'image/rubel-sg.jpeg'%}" alt="" />
+    </div>
+    <div class="col-lg-8 text-bg-dark">
+      <!-- about section here... -->
+      <div class="container row">
+        <h1>{{ about_data.name }}</h1>
+        <p>{{ about_data.desc }}</p>
+        <div class="col-lg-6">
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>Birthday: </strong>
+              <span>28th November, **** </span>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>Website: </strong>
+              <span><a class="link-info" href="http://rubelliumm.github.io">{{ about_data.website }}</a></span>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>Phone: </strong>
+              <span><a class="link-info" href="tel:{{about_data.phone}}">{{ about_data.phone }}</a></span>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>City: </strong>
+              <span>
+                <address>{{about_data.city}}</address>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <ul>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>Age: </strong>
+              <span>--</span>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>Degree: </strong>
+              <span>{{about_data.degree}}</span>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>Email: </strong>
+              <span><a class="link-info" href="mailto:{{about_data.email}}">{{about_data.email}}</a></span>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right"></i> <strong>Freelance: </strong>
+              <span>
+                {% if about_data.freelance %}
+                Available
+                {% else %}
+                Sorry
+                {% endif %}
+              </span>
+            </li>
+          </ul>
+        </div>
+        <p>Feel free to ask me anything, anytime....</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2><u>INTERESTES:</u></h2>
+  </div>
+  <div class="container-fluid text-bg-dark mt-2 py-2">
+    <div class="row gx-3 gy-2">
+      {% for interest in about_data.interest_list %}
+      <div class="col-lg-3 col-md-4">
+        <div class="icon-box bg-secondary p-1 text-center">
+          <i class=""></i>
+          <h3 class="">{{interest}}</h3>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock body %}
