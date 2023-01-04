@@ -11,7 +11,7 @@
 </div>
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex">
-    <a class="navbar-brand" id="logo" href="{% url 'index_page_url' %}">Rubelliumm</a>
+    <a class="navbar-brand" id="logo" href="{% url 'main:index_page_url' %}">Rubelliumm</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon me-2"></span>
@@ -19,15 +19,15 @@
 
     <div class="collapse navbar-collapse container-fluid d-inline-flex" id="navbarSupportedContent">
         <div class="navlink">
-            <a class="card nav-link text-white d-inline" href="{% url 'fifa_home_page_url' %}">
+            <a class="card nav-link text-white d-inline" href="{% url 'fifawcpredictor:fifa_home_page_url' %}">
                 Fifa World Cup predictor
             </a>
             <ul class="navbar-nav d-flex">
-                <li class="nav-item"><a class="nav-link text-white" href="{% url 'about_page_url' %}">
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'main:about_page_url' %}">
                         About Me</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="{% url 'service_page_url' %}">
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'main:service_page_url' %}">
                         Services</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="{% url 'applist_page_url' %}">
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'main:applist_page_url' %}">
                         App list</a></li>
                 <li class="nav-item">
                     <div class="dropdown">
@@ -39,27 +39,21 @@
                             <button class="dropdown-item" type="button">Project-1</button>
                             <button class="dropdown-item" type="button">Project-2</button>
                             <button class="dropdown-item" type="button">Project-3</button>
-                            <a href="{% url 'allprojects_page_url' %}"><button class="dropdown-item" type="button">See
+                            <a href="{% url 'main:allprojects_page_url' %}"><button class="dropdown-item"
+                                    type="button">See
                                     all</button></a>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link text-white" href="{% url 'homepage_url' %}">Blog</a>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'blog:homepage_url' %}">Blog</a>
                 </li>
-                <li class="nav-item"><a class="nav-link text-white" href="{% url 'contact_page_url' %}">
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'main:contact_page_url' %}">
                         Contacts</a></li>
                 <li class="nav-item"><a class="nav-link"
-                        href="{% if user.is_authenticated %}{% url 'logout_url' %}{% else %}{% url 'login_page_url' %}{% endif %}">
+                        href="{% if user.is_authenticated %}{% url 'main:logout_url' %}{% else %}{% url 'main:login_page_url' %}{% endif %}">
                         <i class="fa-solid fa-user"></i>
                     </a></li>
             </ul>
-
-
-
-
-
-
-
         </div>
     </div>
 </nav>

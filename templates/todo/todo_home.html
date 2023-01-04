@@ -19,7 +19,7 @@ todo app
             </div>
             {% else %}
             <p class="text-center">please log in to add todo</p>
-            <a class="btn btn-primary mx-auto" href="{% url 'login_page_url' %}" role="button">Log In</a>
+            <a class="btn btn-primary mx-auto" href="{% url 'main:login_page_url' %}" role="button">Log In</a>
             {% endif %}
         </div>
         <div class="col-sm-5 text-bg-dark ms-3">
@@ -28,7 +28,7 @@ todo app
                 <li>
                     <div class="todo">
                         {{ todo.name }} - {{ todo.importance }}<a href="{% url
-                                    'todo:edit_todo_url' todo.pk %}"><i class="fa-solid
+                                    'todo:todo:edit_todo_url' todo.pk %}"><i class="fa-solid
                                         fa-pen-to-square"></i></a><a href="{% url
                                             'todo:delete_todo_url' todo.pk %}"><i
                                 class="fa-solid fa-trash-can"></i></a>
@@ -48,7 +48,6 @@ todo app
                 {% endfor %}
             </ul>
         </div>
-        <!-- <button class="ms-3 mt-5" type="submit">See more</button> -->
     </div>
 </div>
 {% endblock body %}

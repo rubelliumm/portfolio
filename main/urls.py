@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+app_name = 'main'
 urlpatterns = [
     path('', views.render_index_page, name='index_page_url'),
     path('about/', views.render_about_page, name='about_page_url'),

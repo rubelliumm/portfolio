@@ -70,12 +70,12 @@ def userLogin(request):
             user = authenticate(request, username=user_name, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('index_page_url')
-            return redirect('login_page_url')
+                return redirect('main:index_page_url')
+            return redirect('main:login_page_url')
     else:
         return render(request, 'main/login.html')
 
 
 def userLogout(request):
     logout(request)
-    return redirect('index_page_url')
+    return redirect('main:index_page_url')
