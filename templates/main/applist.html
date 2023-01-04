@@ -6,8 +6,9 @@
     <div class="row">
         <div class="col">
             <ul>
-                <li><a href="{% url 'todo:todo_homepage_url' %}">Todo App</a></li>
-                <li><a href="{% url 'jobapp_homepage_url' %}">Job App</a></li>
+                {% for app in apps %}
+                <li><a href="#">{{app}}</a></li>
+                {% endfor %}
             </ul>
         </div>
     </div>

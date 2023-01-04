@@ -10,5 +10,6 @@ urlpatterns = [
          name='allprojects_page_url'),
     path('applist/', views.render_applist_page, name='applist_page_url'),
     path('sign-up/', views.registration, name='registration_page_url'),
-    path('sign-in/', views.userLogin, name='login_page_url')
+    path('sign-in/', views.userLogin, name='login_page_url'),
+    path('sign-out/', views.userLogout, name='logout_url'),
 ]

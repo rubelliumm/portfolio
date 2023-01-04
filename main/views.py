@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from main.models import aboutAdmin, adminService
-from main.forms import newUserForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
+from portfolio.settings import INSTALLED_APPS
 
 
 def render_index_page(request):
@@ -46,7 +45,9 @@ def render_allprojects_page(request):
 
 
 def render_applist_page(request):
-    return render(request, 'main/applist.html')
+    apps = INSTALLED_APPS[INSTALLED_APPS.index('main'):]
+    print(apps)
+    return render(request, 'main/applist.html', {'apps': apps})
 
 
 def registration(request):
@@ -71,10 +72,10 @@ def userLogin(request):
                 login(request, user)
                 return redirect('index_page_url')
             return redirect('login_page_url')
-            # if user is not None:
-            #     return redirect('login_page_url')
-            # else:
-            #     login(request, user)
-            #     return redirect('index_page_url')
     else:
         return render(request, 'main/login.html')
+
+
+def userLogout(request):
+    logout(request)
+    return redirect('index_page_url')

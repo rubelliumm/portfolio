@@ -25,6 +25,7 @@ def add_todo(request):
 
 
 def remove_todo(request, pk):
+    
     todo = Todo.objects.get(pk=pk)
     todo.delete()
     return redirect('todo:todo_homepage_url')

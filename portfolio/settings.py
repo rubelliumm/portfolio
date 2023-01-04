@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'todo',
     'jobapp',
     'blog',
+    'imageToTextConverter'
 
 ]
 

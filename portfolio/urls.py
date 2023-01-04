@@ -9,5 +9,6 @@ urlpatterns = [
     path('todo/', include('todo.urls')),
     path('jobapp/', include('jobapp.urls')),
     path('blog/', include('blog.urls')),
+    path('image-to-text/', include('imageToTextConverter.urls')),
 
 ]

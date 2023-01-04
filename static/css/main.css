@@ -7,6 +7,7 @@ body {
   background-image: linear-gradient(45deg, black, #5f5656);
   border-radius: 20px;
 }
+
 /* special item, fifa wc predictor... */
 .card {
   position: relative;
@@ -26,6 +27,7 @@ body {
   align-items: center;
   padding: 10px;
 }
+
 span {
   position: absolute;
   border-radius: 100vmax;
@@ -36,24 +38,20 @@ span {
   left: 0;
   width: 0;
   height: 5px;
-  background: linear-gradient(
-    90deg,
-    transparent 50%,
-    rgba(255, 49, 49, 0.5),
-    rgb(255, 49, 49)
-  );
+  background: linear-gradient(90deg,
+      transparent 50%,
+      rgba(255, 49, 49, 0.5),
+      rgb(255, 49, 49));
 }
 
 .bottom {
   right: 0;
   bottom: 0;
   height: 5px;
-  background: linear-gradient(
-    90deg,
-    rgb(57, 255, 20),
-    rgba(57, 255, 20, 0.5),
-    transparent 50%
-  );
+  background: linear-gradient(90deg,
+      rgb(57, 255, 20),
+      rgba(57, 255, 20, 0.5),
+      transparent 50%);
 }
 
 .right {
@@ -61,12 +59,10 @@ span {
   right: 0;
   width: 5px;
   height: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 30%,
-    rgba(0, 255, 255, 0.5),
-    rgb(0, 255, 255)
-  );
+  background: linear-gradient(180deg,
+      transparent 30%,
+      rgba(0, 255, 255, 0.5),
+      rgb(0, 255, 255));
 }
 
 .left {
@@ -74,12 +70,10 @@ span {
   bottom: 0;
   width: 5px;
   height: 0;
-  background: linear-gradient(
-    180deg,
-    rgb(255, 255, 113),
-    rgba(255, 255, 113, 0.5),
-    transparent 70%
-  );
+  background: linear-gradient(180deg,
+      rgb(255, 255, 113),
+      rgba(255, 255, 113, 0.5),
+      transparent 70%);
 }
 
 .top {
@@ -111,6 +105,7 @@ span {
 }
 
 @keyframes animateBottom {
+
   0%,
   50% {
     opacity: 0;
@@ -129,6 +124,7 @@ span {
 }
 
 @keyframes animateRight {
+
   0%,
   25% {
     opacity: 0;
@@ -148,6 +144,7 @@ span {
 }
 
 @keyframes animateLeft {
+
   0%,
   75% {
     opacity: 0;
@@ -174,7 +171,9 @@ span {
   font: 1.5rem sans-serif;
   cursor: pointer;
   will-change: transform;
-} /*
+}
+
+/*
 
 
 /* end ------------------ */
@@ -183,75 +182,95 @@ span {
 nav {
   color: white;
 }
+
 nav form {
   margin-left: auto;
 }
-nav .navelem {
-  margin-left: 30px;
-}
-.navelem {
-  display: flex;
-  vertical-align: middle;
-}
-div.navelem * {
-  align-self: center;
-}
 
-div.navlink > * {
-  margin-right: 30px;
-}
-form > * {
+
+form>* {
   margin: 0px, 10px;
 }
+
 input.search {
   margin-right: 30px;
 }
-
-div.navlink {
+.navlink{
+  display: inline-flex;
+  align-items: center;
   margin-left: auto;
 }
-.bismillah {
-  margin-left: 33.33%;
+.navlink ul li{
+  margin-inline: 5px;
+  border-radius: 5px;
+  align-self: center;
 }
+.navlink ul li:hover{
+  background-color: #5f5656;
+}
+#top{
+  display: flex;
+}
+#bismillah {
+  margin-inline: auto ;
+}
+
 .about ul li {
   list-style: none;
 }
+
 li span {
   margin-inline: 10px;
 }
+
 .service {
   padding: 1rem;
 }
+
 .service:hover {
   background: #303438;
   font-weight: bold;
 }
+
 /* .service_container {
   max-width: fit-content;
 } */
-.teams ul li{
+.teams ul li {
   list-style: none;
   padding: 1rem;
 }
-.teams ul li:hover{
+
+.teams ul li:hover {
   background-color: #18caca;
 }
-.groups{
-  max-width:200px;
+
+.groups {
+  max-width: 200px;
 }
-.todo i{
+
+.todo i {
   float: right;
   margin-inline: 10px;
 }
-.todo{
+
+.todo {
   margin: 5px 0px;
 }
+
 .todo a {
   color: white;
 }
-.todo a i:hover{
-  color:red;
+
+.todo a i:hover {
+  color: red;
 }
-ul.todoul{
+
+ul.todoul {
   list-style: auto;
+}
+
+.create-todo-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

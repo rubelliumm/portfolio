@@ -1,51 +1,65 @@
-<div class="container-fluid row d-flex">
-    <div class="container-fluid text-center col-9">
-      <p class="d-inline-flex align-content-center mb-0 bismillah">
+<div class="container-fluid text-center col-9" id="top">
+    <p id="bismillah">
         বিসমিল্লাহির রহমানির রহিম
-      </p>
-    </div>
-    <form class="col-3 d-none d-lg-flex">
-      <input class="form-control search" type="search" placeholder="Search" aria-label="Search" />
-      <button class="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">
-        Search
-      </button>
+    </p>
+    <form class="col-3 d-flex d-lg-flex">
+        <input class="form-control search" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-3" type="submit">
+            Search
+        </button>
     </form>
-  </div>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex">
+</div>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex">
     <a class="navbar-brand" id="logo" href="{% url 'index_page_url' %}">Rubelliumm</a>
-    <div class="container d-inline-flex">
-      <div class="navlink">
-        <div class="d-inline">
-          <a class="card nav-item nav-link text-white d-inline" href="{% url 'fifa_home_page_url' %}">
-            Fifa World Cup predictor
-          </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon me-2"></span>
+    </button>
+
+    <div class="collapse navbar-collapse container-fluid d-inline-flex" id="navbarSupportedContent">
+        <div class="navlink">
+            <a class="card nav-link text-white d-inline" href="{% url 'fifa_home_page_url' %}">
+                Fifa World Cup predictor
+            </a>
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'about_page_url' %}">
+                        About Me</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'service_page_url' %}">
+                        Services</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'applist_page_url' %}">
+                        App list</a></li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle bg-dark border-dark" type="button"
+                            id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">Project-1</button>
+                            <button class="dropdown-item" type="button">Project-2</button>
+                            <button class="dropdown-item" type="button">Project-3</button>
+                            <a href="{% url 'allprojects_page_url' %}"><button class="dropdown-item" type="button">See
+                                    all</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'homepage_url' %}">Blog</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'contact_page_url' %}">
+                        Contacts</a></li>
+                <li class="nav-item"><a class="nav-link"
+                        href="{% if user.is_authenticated %}{% url 'logout_url' %}{% else %}{% url 'login_page_url' %}{% endif %}">
+                        <i class="fa-solid fa-user"></i>
+                    </a></li>
+            </ul>
+
+
+
+
+
+
+
         </div>
-        <a class="nav-item nav-link text-white d-inline" href="{% url 'about_page_url' %}">
-          About Me</a>
-        <a class="nav-item nav-link text-white d-inline" href="{% url 'service_page_url' %}">
-          Services</a>
-        <a class="nav-item nav-link text-white d-inline" href="{% url 'applist_page_url' %}">
-          App list</a>
-        <div class="dropdown d-inline">
-          <button class="btn btn-secondary dropdown-toggle bg-dark border-dark" type="button" id="dropdownMenu2"
-            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Projects
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item" type="button">Project-1</button>
-            <button class="dropdown-item" type="button">Project-2</button>
-            <button class="dropdown-item" type="button">Project-3</button>
-            <a href="{% url 'allprojects_page_url' %}"><button class="dropdown-item" type="button">See all</button></a>
-          </div>
-        </div>
-        <a class="nav-item nav-link text-white d-inline" href="{% url 'homepage_url' %}">Blog</a>
-        <a class="nav-item nav-link text-white d-inline" href="{% url 'contact_page_url' %}">
-          Contacts</a>
-          <a href="{% url 'login_page_url' %}">
-            <i class="fa-solid fa-user"></i>
-          </a>
-          
-      </div>
     </div>
-  </nav>
+</nav>
