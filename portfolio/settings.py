@@ -13,7 +13,7 @@ SECRET_KEY = "django-insecure-u4b0#=tn@9mrwd0g*-4xl&+da)@2ocm)dua@2ym$x9hd3$7@4)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     "main",  # add all user defined application main
     "fifawcpredictor",
     "todo",
-    "jobapp",
     "blog",
     "imageToTextConverter",
     "widget_tweaks",

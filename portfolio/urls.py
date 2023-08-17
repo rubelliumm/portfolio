@@ -12,7 +12,6 @@ urlpatterns = [
     path("", include("main.urls")),
     path("fifawcpredictor/", include("fifawcpredictor.urls")),
     path("todo/", include("todo.urls")),
-    path("jobapp/", include("jobapp.urls")),
     path("blog/", include("blog.urls")),
     path("image-to-text/", include("imageToTextConverter.urls")),
     path("server/", include("myserver.urls")),
