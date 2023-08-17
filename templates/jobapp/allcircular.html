@@ -1,0 +1,116 @@
+{% extends "jobapp/jobapp_base.html" %}
+
+{% block jobappbody %}
+<!-- <h1>All job Circular list:</h1>
+<div class="container-fluid m-5 allcircular">
+    <div class="row allcircular-heading">
+        <div class="allcircular-searchbar">
+            <input type="search" name="searchallcircular" id="searchallcircular">
+            <button type="submit">Search</button>
+        </div>
+        <div class="create-circular">
+            <a href="{% url 'customAdmin:create_circular_page_url' %}">
+                <p>Create Circular: <i class="fa-solid fa-square-plus"></i></p>
+            </a>
+        </div>
+    </div>
+    <div class="row allcircular-list justify-content-md-between">
+
+
+
+        <div class="col-md-4 column">
+            <div class="d-flex justify-content-md-between">
+                <h1><a href="">{{circular.title}}</a>
+                </h1>
+            </div>
+            <div class="details">
+                <p><i class="fa-solid fa-location-dot"></i>Location: {{circular.location}}</p>
+                <p><i class="fa-solid fa-school"></i>Qualification: {{circular.min_qualification}}</p>
+                <p><i class="fa-solid fa-briefcase"></i>Experience: {{circular.experience}}</p>
+            </div>
+            <div class="date">
+                <p class="start-date">Application starts on: {{circular.application_start_date}}</p>
+                <p class="end-date">Deadline: {{circular.deadline}}</p>
+            </div>
+
+        </div>
+        <div class="col-md-4 column">
+            <div class="d-flex justify-content-md-between">
+                <h1><a href="">{{circular.title}}</a>
+                </h1>
+                <a class="save-icon" href=""><i class=""></i></a>
+            </div>
+            <div class="details">
+                <p><i class="fa-solid fa-location-dot"></i>Location: {{circular.location}}</p>
+                <p><i class="fa-solid fa-school"></i>Qualification: {{circular.min_qualification}}</p>
+                <p><i class="fa-solid fa-briefcase"></i>Experience: {{circular.experience}}</p>
+            </div>
+            <div class="date">
+                <p class="start-date">Application starts on: {{circular.application_start_date}}</p>
+                <p class="end-date">Deadline: {{circular.deadline}}</p>
+            </div>
+        </div>
+
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% for circular in circulars %}
+            <div class="row individualcircularrow">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-md-between">
+                        <h1><a href="{% url 'jobapp:individual_circular_page_url' circular.id %}">{{circular.title}}</a>
+                        </h1>
+                        <a class="save-icon"
+                            href="{% if circular.is_saved %}{% url 'jobapp:unsave_circular_url' circular.id %}{% else %}{% url 'jobapp:save_circular_url' circular.id %}{% endif %}"><i
+                                class="{% if circular.is_saved %}fa-solid{% else %}fa-regular{% endif %} fa-bookmark save-icon"></i></a>
+                    </div>
+                    <div class="circular_details">
+                        <p><i class="fa-solid fa-location-dot"></i>Location: {{circular.location}}</p>
+                        <p><i class="fa-solid fa-school"></i>Qualification: {{circular.min_qualification}}</p>
+                        <p><i class="fa-solid fa-briefcase"></i>Experience: {{circular.experience}}</p>
+                    </div>
+                    <div class="circular_start_and_end_date">
+                        <p class="start_date">Application starts on: {{circular.application_start_date}}</p>
+                        <p class="end_date">Deadline: {{circular.deadline}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-md-between">
+                        <h1><a href="{% url 'jobapp:individual_circular_page_url' circular.id %}">{{circular.title}}</a>
+                        </h1>
+                        <a class="save-icon"
+                            href="{% if circular.is_saved %}{% url 'jobapp:unsave_circular_url' circular.id %}{% else %}{% url 'jobapp:save_circular_url' circular.id %}{% endif %}"><i
+                                class="{% if circular.is_saved %}fa-solid{% else %}fa-regular{% endif %} fa-bookmark save-icon"></i></a>
+                    </div>
+                    <div class="circular_details">
+                        <p><i class="fa-solid fa-location-dot"></i>Location: {{circular.location}}</p>
+                        <p><i class="fa-solid fa-school"></i>Qualification: {{circular.min_qualification}}</p>
+                        <p><i class="fa-solid fa-briefcase"></i>Experience: {{circular.experience}}</p>
+                    </div>
+                    <div class="circular_start_and_end_date">
+                        <p class="start_date">Application starts on: {{circular.application_start_date}}</p>
+                        <p class="end_date">Deadline: {{circular.deadline}}</p>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+{% endblock jobappbody %}

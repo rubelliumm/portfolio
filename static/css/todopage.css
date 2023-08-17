@@ -1,0 +1,79 @@
+.todotopnav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: self-end;
+}
+
+.todotopnav h4,
+p {
+    font-size: x-large;
+}
+
+.todotopnav p {
+    padding: 5px;
+    background-color: #bcc9d8;
+    cursor: pointer;
+}
+
+.todotopnav p:hover {
+    background-color: #8a929b;
+}
+
+.todotopnav p span {
+    font-size: xx-large;
+    margin-left: 3px;
+}
+
+.add_todo_modal_container {
+    position: fixed;
+    display: none;
+    width: 30%;
+    height: fit-content;
+    background-color: rgb(195, 199, 199);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 1;
+    margin-left: 35%;
+    margin-top: 10px;
+
+}
+
+.add_todo_modal_heading .heading {
+    display: flex;
+}
+
+.add_todo_modal_heading .heading h2 {
+    text-align: center;
+    width: -moz-available;
+}
+
+.add_todo_modal_heading .heading p {
+    margin-left: auto;
+    margin-top: initial;
+    cursor: pointer;
+    height: fit-content;
+    padding: 3px;
+}
+
+.add_todo_modal_heading .heading p:hover {
+    background-color: #b7aeae;
+}
+
+.add_todo_modal_body form label {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.add_todo_modal_body form input[type=text],
+textarea {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px 5px;
+}
+
+.add_todo_modal_body form input[type=submit] {
+    margin: 10px 0px;
+}
+
+/*************************** end of todo modal css******************** */

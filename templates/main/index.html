@@ -1,5 +1,8 @@
-{% extends "main/base.html" %} {% load static %} {% block title %}
-Rubelliumm-home {% endblock title %} {% block body %}
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %} Rubelliumm-home {% endblock title %}
+{% block body %}
+
 <div class="container">
   <div class="row mt-5">
     <div class="col text-center">
@@ -7,23 +10,48 @@ Rubelliumm-home {% endblock title %} {% block body %}
     </div>
   </div>
 </div>
-<div class="container">
-  <pre class="text-center mt-3 align-self-right">
-    Hello, this is <b>Rubelliumm</b> here..
-    This website is still in development process.
-    I used Django web framework to build this web application.
-    As time goes on, different feature will be added to this web application.
-    Current functionalities of this web app is as follows:
+<div class="wrapperOuter">
+  <div class="wrapper">
 
-    i. Fifa World cup predictor app.
-    ii. Job app for bangladeshi job seeker person.
-    iii. Todo app.
-    iv. and other functional app to run this web application.
+    <div class="setWrap">
+      <div class="wtb wta">
+        <span class="wtb__circle"></span>
 
-    If you have any advice/suggesion/query about me or my project,
-    please feel free to ask me anything here >> j3rr4@programmer.net
+        <span class="wtb__no--1">1</span>
+        <span class="wtb__no--2">2</span>
+        <span class="wtb__no--3">3</span>
+        <span class="wtb__no--4">4</span>
+        <span class="wtb__no--5">5</span>
+        <span class="wtb__no--6">6</span>
+        <span class="wtb__no--7">7</span>
+        <span class="wtb__no--8">8</span>
+        <span class="wtb__no--9">9</span>
+        <span class="wtb__no--10">10</span>
+        <span class="wtb__no--11">11</span>
+        <span class="wtb__no--12">12</span>
 
-  </pre>
+
+        <span class="wtb__dot--1"></span>
+        <span class="wtb__dot--2"></span>
+        <span class="wtb__dot--4"></span>
+        <span class="wtb__dot--5"></span>
+        <span class="wtb__dot--7"></span>
+        <span class="wtb__dot--8"></span>
+        <span class="wtb__dot--10"></span>
+        <span class="wtb__dot--11"></span>
+
+
+        <span class="wtb__needle--sec sec"></span>
+        <span class="wtb__needle--min min"></span>
+        <span class="wtb__needle--hour hour"></span>
+        <label class="wtb__pin"></label>
+      </div>
+    </div>
+
+    <div class="clock"></div>
+  </div>
 </div>
+<p style="margin-left: 8in;">Your clock is running!!! Why are you PAUSED?</p>
+
 
 {% endblock body %}

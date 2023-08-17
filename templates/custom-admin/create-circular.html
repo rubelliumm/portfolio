@@ -1,0 +1,95 @@
+{% extends "custom-admin/admin_base.html" %}
+{% load widget_tweaks %}
+{% block body %}
+<!-- <div class="container circular-creation-form">
+    <div class="heading">
+        <header>Create Circular:</header>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        {% render_field form.title class+='form-control' %}
+        <input type="submit" value="Create">
+    </form>
+</div> -->
+
+<div class="container circular-creation-form p-0">
+    <form id="circularcreationform" action="#" method="POST">
+        {% csrf_token %}
+        <h2>create a circular.</h2>
+        <div class="row">
+            <div class="col-md-10">
+                <label for="#title">Title<sup>*</sup>: </label>
+                {% render_field form.title class+="form-control" %}
+                <!-- <textarea name="circular_title" id="title" cols="30" rows="5" required></textarea> -->
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <label for="">Circular ref. No.: </label>
+                <!-- <input type="text" name="circular_ref" id=""> -->
+                {% render_field form.circular_ref_no class+="form-control" %}
+                <label for="#">Organaization<sup>*</sup>: </label>
+                {% render_field form.organization class+="form-control" %}
+                <label for="">Vacancies: </label>
+                {% render_field form.vacancy class+="form-control" %}
+                <label for="">Application Start Date: </label>
+                {% render_field form.application_start_date type="date" class+="form-control" %}
+                <label for="">Application Deadline: </label>
+                {% render_field form.deadline type="date" class+="form-control" %}
+                <label for="">Description: </label>
+                {% render_field form.description class+="form-control" %}
+                <label for="">Catagories<sup>*</sup>: </label>
+                {% render_field form.catagory class+="form-control" %}
+                <label for="">Tags: </label>
+                <p class="tags"></p>
+                {% render_field form.tags class+="form-control" %}
+                <label for="">Locations: </label>
+                {% render_field form.location class+="form-control" %}
+
+            </div>
+            <div class="col-md-5">
+
+                <label for="">Minimum Qualifications: </label>
+                {% render_field form.min_qualification class+="form-control" %}
+                <label for="">Experience: </label>
+                {% render_field form.experience class+="form-control" %}
+                <label for="">Grade Range: </label>
+                {% render_field form.grade_range class+="form-control" %}
+                <label for="">Application fee: </label>
+                {% render_field form.application_fee class+="form-control" %}
+                <label for="">Application Published on: </label>
+                {% render_field form.applicaton_published_on type="date"class+="form-control" %}
+                <label for="">Extra info: </label>
+                {% render_field form.extra_info class+="form-control" %}
+                <div class="row">
+                    <div class="col-4">
+                        <p class="w-80 p-0 m-auto">Is featured?</p>
+                    </div>
+                    <div class="col-7">
+                        <div class="row justify-content-start boolinput">
+                            {% render_field form.is_featured class+="form-control" %}
+                            <!-- <label for="">No </label>
+                            <input type="radio" name="is_featured" id="" value="no"> -->
+                        </div>
+                    </div>
+                </div>
+
+                <label for="images">images: </label>
+                <input type="file" name="images" id="image">
+                <p>upload file:</p>
+                {% render_field form.pdf_file %}
+                <div class="boolinput d-flex">
+                    <label for="confirm-form-submission">Confirm?</label>
+                    <input type="checkbox" name="confirm-form-submission" id="" required>
+                </div>
+
+
+
+            </div>
+            <input type="submit" value="Create">
+        </div>
+
+    </form>
+</div>
+{% endblock body %}

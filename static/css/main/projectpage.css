@@ -1,0 +1,33 @@
+.project-card {
+    border: 1px solid;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-card img {
+    width: 560px;
+    height: 315px;
+}
+
+.project-card .title {
+    font-size: 2rem;
+    max-height: 55px;
+    overflow: hidden;
+}
+
+.project-card .tags p {
+    width: fit-content;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.project-links {
+    font-size: 25px;
+}
+
+.project-links i {
+    margin: 0px 2rem;
+}

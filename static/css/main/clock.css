@@ -1,0 +1,332 @@
+.wrapperOuter {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    position: relative;
+}
+
+.setWrap {
+    margin: 30px auto;
+    width: 500px;
+}
+
+.wtb {
+    border-radius: 50%;
+    box-shadow: 5px 5px 7px #928e8e;
+    -moz-box-shadow: 5px 5px 7px #928e8e;
+    -webkit-box-shadow: 5px 5px 7px #928e8e;
+    height: 500px;
+    position: relative;
+    width: 500px;
+}
+
+.wtb__circle {
+    background-color: #f7f7f7;
+    border: 20px solid #173559;
+    border-radius: 50%;
+    box-shadow: inset 3px 3px 5px #928e8e;
+    -moz-box-shadow: inset 3px 3px 5px #928e8e;
+    -webkit-box-shadow: inset 3px 3px 5px #928e8e;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+[class*="wtb__needle--"] {
+    background-color: #27527c;
+    background: -webkit-linear-gradient(#27527c 0%, #27527c 51%, transparent 51%, transparent 100%);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient();
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#27527c 0% 0%, #27527c 51%, transparent 51%, transparent 100%);
+    /* For Firefox 3.6 to 15 */
+    background: -linear-gradient(#27527c 0%, #27527c 51%, transparent 51%, transparent 100%);
+    /* Standard syntax (must be last) */
+    border-radius: 100px;
+    display: block;
+    height: 70%;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    top: 15%;
+    width: 16px;
+}
+
+.wtb__needle--sec {
+    background: -webkit-linear-gradient(#ff8600 0%, #f00 51%, transparent 51%, transparent 100%);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient();
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ff8600 0% 0%, #f00 51%, transparent 51%, transparent 100%);
+    /* For Firefox 3.6 to 15 */
+    background: -linear-gradient(#ff8600 0%, #f00 51%, transparent 51%, transparent 100%);
+    /* Standard syntax (must be last) */
+    margin-left: -2px;
+    width: 4px;
+    z-index: 10;
+}
+
+.wtb__needle--min {
+    height: 60%;
+    top: 20%;
+    z-index: 9;
+}
+
+.wtb__needle--hour {
+    height: 46%;
+    top: 27%;
+    z-index: 8;
+}
+
+.wtb.smoothMove [class*="wtb__needle--"] {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.wtb__pin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3dc3c1;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    z-index: 11;
+}
+
+.wtb__pin:before {
+    background: #f29133;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #4a4646;
+    content: '';
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+}
+
+[class*="wtb__dot--"] {
+    border-radius: 50%;
+    display: block;
+    height: 4%;
+    position: absolute;
+    width: 4%;
+}
+
+.wtb__dot--1 {
+    background-color: #b6db71;
+    right: 27.8%;
+    top: 12.7%;
+}
+
+.wtb__dot--2 {
+    background-color: #eede89;
+    right: 12.9%;
+    top: 27.5%;
+}
+
+.wtb__dot--4 {
+    background-color: #3dc3c2;
+    right: 12.9%;
+    top: 68.3%;
+}
+
+.wtb__dot--5 {
+    background-color: #b5da70;
+    right: 27.8%;
+    top: 83%;
+}
+
+.wtb__dot--7 {
+    background-color: #ef9034;
+    left: 27.8%;
+    top: 83%;
+}
+
+.wtb__dot--8 {
+    background-color: #3dc3c2;
+    left: 12.9%;
+    top: 68.3%;
+}
+
+.wtb__dot--10 {
+    background-color: #eedf89;
+    left: 12.9%;
+    top: 28%;
+}
+
+.wtb__dot--11 {
+    background-color: #ef9034;
+    left: 27.5%;
+    top: 12.7%;
+}
+
+[class*="wtb__no--"] {
+    font-family: 'Chicle', cursive;
+    font-size: 190%;
+    letter-spacing: 5px;
+    position: absolute;
+}
+
+.wtb__no--3,
+.wtb__no--6,
+.wtb__no--9,
+.wtb__no--12 {
+    font-size: 60px;
+}
+
+.wtb__no--1 {
+    color: #b5da70;
+    right: 31%;
+    top: 17%;
+}
+
+.wtb__no--2 {
+    color: #eede89;
+    right: 18%;
+    top: 29%;
+}
+
+.wtb__no--3 {
+    color: #ef9033;
+    top: 43%;
+    right: 7%;
+}
+
+.wtb__no--4 {
+    color: #3dc3c2;
+    right: 19%;
+    bottom: 27%;
+}
+
+.wtb__no--5 {
+    color: #b6db71;
+    right: 32%;
+    bottom: 16%;
+}
+
+.wtb__no--6 {
+    color: #eede89;
+    left: 47.5%;
+    bottom: 4%;
+}
+
+.wtb__no--7 {
+    color: #ef9034;
+    left: 33%;
+    bottom: 16%;
+}
+
+.wtb__no--8 {
+    color: #3dc3c2;
+    left: 19%;
+    bottom: 29%;
+}
+
+.wtb__no--9 {
+    color: #b6dc6f;
+    top: 43%;
+    left: 8%;
+}
+
+.wtb__no--10 {
+    color: #eede89;
+    left: 19%;
+    top: 29%;
+}
+
+.wtb__no--11 {
+    color: #ef9034;
+    left: 31%;
+    top: 17%;
+}
+
+.wtb__no--12 {
+    color: #3dc3c2;
+    left: 46%;
+    top: 6%;
+}
+
+.clockEditor {
+    text-align: center;
+    margin: 30px 0;
+    overflow: hidden;
+    width: 550px;
+}
+
+.clockEditor__tile {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.clockEditor__name {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.clockEditor__plus,
+.clockEditor__minus {
+    background-color: #9b56da;
+    border-radius: 10px 0px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.clockEditor__input {
+    border: none;
+    border-left: 2px solid #9b56da;
+    border-radius: 0 8px;
+    border-right: 2px solid #9b56da;
+    color: #555;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    height: 34px;
+    text-align: center;
+    width: 50px;
+    margin: 5px 0;
+}
+
+.clockEditor__setTime,
+.clockEditor__resetTime {
+    background-color: #2ca04b;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 30px;
+    outline: none;
+    padding: 10px 20px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 180px;
+}
+
+.clockEditor__setTime {
+    margin-right: 30px;
+}
+
+.clockEditor__setTime:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.clockEditor__resetTime {
+    background-color: #b1311c;
+}
+
+.clock {
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+}

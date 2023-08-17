@@ -1,0 +1,159 @@
+@media screen and (min-width:768px) {}
+
+
+.hero {
+    height: 280vh;
+    width: 100%;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(https://png.pngtree.com/background/20210710/original/pngtree-blue-mountains-hd-background-picture-image_1019078.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    position: relative;
+}
+
+.main {
+    /* chilo form-box*/
+    width: 90%;
+    height: 235%;
+    /*make it fit content */
+    position: relative;
+    margin: 0px auto;
+    background: transparent;
+    padding: 5px;
+    overflow: hidden;
+
+}
+
+.button-box {
+    width: 250px;
+    /*220 chilo*/
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #4a3b54;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 130px;
+    /* chilo 110*/
+    height: 100%;
+    background: linear-gradient(to right, #46588c, #d46e75);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.social-icons {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 12px;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+
+#aboutpanel {
+    background-color: black;
+}
+
+/* span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+} */
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 100%;
+}
+
+#loginbtn {
+    margin-left: 0rem;
+}
+
+#registerbtn {
+    margin-left: 0rem;
+}
+
+
+resume .resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #18d26e;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+    padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #18d26e;
+    border: 2px solid #18d26e;
+}

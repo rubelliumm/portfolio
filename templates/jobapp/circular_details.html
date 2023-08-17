@@ -1,0 +1,81 @@
+{% extends "jobapp/jobapp_base.html" %}
+
+{% block jobappbody %}
+<div class="container-fluid circular-details-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between info">
+                <div class="info-text">
+                    <h1 class="heading">✪ {{circular.title}}<span>
+                            <a class="save-icon"
+                                href="{% if circular.is_saved %}{% url 'jobapp:unsave_circular_url' circular.id %}{% else %}{% url 'jobapp:save_circular_url' circular.id %}{% endif %}"><i
+                                    class="{% if circular.is_saved %}fa-solid{% else %}fa-regular{% endif %} fa-bookmark save-icon"></i></a>
+                        </span></h1>
+                    <div class="details">
+                        <p><i class="fa-solid fa-angles-right"></i> Start Date: {{circular.application_start_date}}</p>
+                        <p><i class="fa-solid fa-angles-right"></i> Link: <a
+                                href="{{circular.apply_link}}">{{circular.apply_link}}</a></p>
+                        <p><i class="fa-solid fa-angles-right"></i> Application Deadline: {{circular.deadline}}</p>
+                        <p><i class="fa-solid fa-angles-right"></i> No. of vacancies: {{circular.vacancy}}</p>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="{% if circular.organization.logo %}
+                      {{circular.organization.logo.url}} {% else %}
+                    {% endif %}" alt="logo here">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4 more-details">
+        Brief description about the circular.please read attentively.
+
+        <ul>
+            <li><i class="fa-solid fa-angle-right"></i> Organization Name: {{circular.organization}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Circular ref. No.: {{circular.circular_ref_no}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> No. of Vacancies: {{circular.vacancy}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Application Fee: {{circular.application_fee}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Grade: {{circular.grade_range}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Job Catagory: {% for i in circular.catagory.iterator %}
+                <span>#{{i}}</span>,
+                {% endfor %}
+            </li>
+            <li><i class="fa-solid fa-angle-right"></i> Location: {{circular.location}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Qualifications: {{circular.min_qualification}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Experience: {{circular.experience}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Male or Female Candidate?:
+                {{circular.male_or_female_both_can_apply}}</li>
+            <li><i class="fa-solid fa-angle-right"></i> Extra Info.: {{circular.extra_info}}</li>
+            <!-- <li><i class="fa-solid fa-angle-right"></i> Pdf file: <a
+                    href="{% if circular.pdf %}{{circular.pdf_file.url}}{% else %}{% endif %}">Click here.</a>
+            </li> -->
+
+
+        </ul>
+    </div>
+    <div class="row details">
+        <object class="pdf-file" data="{% if circular.pdf_file %}{{circular.pdf_file.url}}{% else %}{% endif %}"
+            type="application/pdf"></object>
+        {% if circular.pdf_file %}
+        {% else %}
+        <div class="col-md-12">
+            <p align="justify" class="desc">{{circular.description}}</p>
+            <div class="circularimages">
+                {% for image in images %}
+                <div class="image">
+                    <img src="{{image.image.url}}" alt="circular_image">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock jobappbody %}

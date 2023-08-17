@@ -1,0 +1,42 @@
+<script>
+    $(document).ready(function () {
+        $('#todoform').submit(function (e) {
+            e.preventDefault();
+            var name = $('#todo_name').val();
+            var details = $('#todo_details').val();
+            var importance = $('#importance').val();
+            var url = "{% url 'todo:add_todo_url' %}"
+            var data = {
+                'name': name,
+                'details': details,
+                'importance': importance,
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+            }
+            //ajax request for adding new todo
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: data,
+                success: function (response) {
+                    $('#message').text('added successfully');
+                    for (let i = 0; i <= response.todo.length; i++) {
+                        $('.todoli')[i].innerHTML = '<div class="todo"><a>' + response.todo[i].name + ' -' + response.todo[i].importance + '</a><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i><hr /></div>';
+                    }
+                }
+            });
+        });
+        //for edit todo button call ...
+        $('#edit_todo').click(function () {
+            var name = $(this).parent().text();
+            console.log(name)
+        });
+        //end edit todo ....
+        //for delete todo button call ...
+        $('#delete_todo').click(function () {
+            console.log('deletig todo');
+        });
+        //end delete todo....
+
+
+    });
+</script>

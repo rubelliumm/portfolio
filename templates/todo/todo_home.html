@@ -1,8 +1,46 @@
 {% extends "main/base.html" %}
-{% block title %}
-todo app
-{% endblock title %}
+{% load static %}
+{% block title %}todo app{% endblock title %}
+
+{% block linkblock %}
+<link rel="stylesheet" href="{% static 'css/todopage.css' %}" />
+{% endblock linkblock %}
 {% block body %}
+<div class="todotopnav">
+    <h4>Todo page</h4>
+    <p onclick="openTodoCreateModal()">add todo</p>
+</div>
+<div id="add_todo_modal" class="add_todo_modal_container">
+    <div class="add_todo_modal_heading">
+        <div class="heading">
+            <h2>Add todo</h2>
+            <p onclick="closeTodoCreateModal()">&#x2715;</p>
+        </div>
+
+        <hr>
+    </div>
+    <div class="add_todo_modal_body">
+        <!-- body of add_todo_modal -->
+        <p>Add your todo here.You must be logged in to add todo.</p>
+        <form action="#" method="post">
+            <label for="todoName">Todo</label>
+            <br>
+            <input type="text" name="todo_name" id="todoName" maxlength="100" placeholder="Enter Todo Heading">
+            <br>
+            <label for="todoDesc">Details</label>
+            <br>
+            <textarea name="todo_details" id="todoDesc" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Add" maxlength="300">
+        </form>
+    </div>
+    <div class=" add_todo_modal_footer">
+        <!-- footer goes here... -->
+        <p>not logged in? login <a href="#">here.</a></p>
+    </div>
+</div>
+
+
 <div class="container-fluid mt-3">
     <div class="row gx-3">
         <div class="col-sm-3 text-bg-info mx-2 create-todo-cont">
@@ -10,10 +48,18 @@ todo app
             <div class="container">
                 <h2>Create todo listings:</h2>
                 <div class="container">
-                    <form action="{% url 'todo:add_todo_url' %}" method="post" class="form mb-5">
+                    <form class="form mb-5" id="todoform">
                         {% csrf_token %}
+                        {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                {% endfor %}
+                        </ul>
+                        {% endif %}
+
                         {{ form }}
-                        <input class="btn btn-success mt-2" type="submit" value="Add" />
+                        <input class="btn btn-success mt-2" type="submit" value="Add" id="todo_submit" />
                     </form>
                 </div>
             </div>
@@ -25,13 +71,10 @@ todo app
         <div class="col-sm-5 text-bg-dark ms-3">
             <ul class="todoul">
                 {% for todo in todo %}
-                <li>
+                <li class="todoli">
                     <div class="todo">
-                        {{ todo.name }} - {{ todo.importance }}<a href="{% url
-                                    'todo:todo:edit_todo_url' todo.pk %}"><i class="fa-solid
-                                        fa-pen-to-square"></i></a><a href="{% url
-                                            'todo:delete_todo_url' todo.pk %}"><i
-                                class="fa-solid fa-trash-can"></i></a>
+                        <a>{{ todo.name }} - {{ todo.importance }}</a><i class="fa-solid fa-pen-to-square"
+                            id="edit_todo"></i><i class="fa-solid fa-trash-can" id="delete_todo"></i>
                         <hr />
                     </div>
                 </li>
@@ -51,3 +94,7 @@ todo app
     </div>
 </div>
 {% endblock body %}
+
+{% block scriptblock %}
+<script src="{% static 'js/todo.js' %}"></script>
+{% endblock scriptblock %}

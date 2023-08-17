@@ -1,0 +1,19 @@
+{% extends "jobapp/jobapp_base.html" %}
+
+{% block jobappbody %}
+<div class="container saved-circular-list">
+    <div class="row">
+        <p>All of your saved Circular:</p>
+    </div>
+    <div class="row">
+        <div class="circular">
+            <ul>
+                {% for item in saved_list %}
+                <li><a href="{% url 'jobapp:individual_circular_page_url' item.pk %}"> {{item.title}}</a></li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock jobappbody %}

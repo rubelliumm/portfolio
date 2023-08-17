@@ -10,7 +10,7 @@ class Todo(models.Model):
         ('⭐⭐⭐⭐', '4 star'),
         ('⭐⭐⭐⭐⭐', '5 star'),
     )
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     detail = models.TextField(blank=True)
     created = models.DateTimeField(default=timezone.now)
     importance = models.CharField(

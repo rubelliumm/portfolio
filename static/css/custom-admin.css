@@ -1,0 +1,29 @@
+body {
+    background-color: aquamarine;
+}
+
+.circular-creation-form form {
+    display: grid;
+    margin: 1rem 3rem;
+}
+
+.circular-creation-form form input,
+textarea,
+select {
+    width: 100%;
+}
+
+.boolinput>* {
+    width: fit-content !important;
+
+}
+
+.circular-creation-form form .tags {
+    height: fit-content;
+    margin: 1px 0px;
+}
+
+.circular-creation-form form .org-dropdown {
+    margin-left: -25px;
+    cursor: pointer;
+}

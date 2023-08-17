@@ -1,0 +1,30 @@
+{% load static %}
+<div id="user_modal" class="user_container">
+  <div class="heading">
+    <div class="avatar">
+      <img src="{% static 'image/rubelliumm_logo.jpg' %}" alt="rubelliumm">
+    </div>
+    <div class="userinfo">
+      <h2>{{ user_data.full_name }}</h2>
+      <h4>@{{ user_data.user_name }}</h4>
+      <a href="">manage your acount.</a>
+    </div>
+  </div>
+  <div class="content">
+    <ul>
+      <li><i class="fa fa-user"></i>Your Account</li>
+      <li><i class="fa fa-gears"></i>Account settings</li>
+      <li><i class="fa fa-solid fa-right-from-bracket"></i>
+        {% if user.is_authenticated %}
+        <a href="{% url 'main:logout_url' %}"> Log Out</a>
+      </li>
+      {% else %}<a href="{% url 'main:login_page_url' %}">Log in</a>{% endif %}
+    </ul>
+    <hr>
+    <ul>
+      <li><i class="fa fa-handshake-angle"></i>Help</li>
+      <li><i class="fa-regular fa-comment-dots"></i>Send Feedback</li>
+    </ul>
+    <hr>
+  </div>
+</div>

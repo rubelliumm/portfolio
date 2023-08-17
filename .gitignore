@@ -1,5 +1,5 @@
 .vscode
 venv1
-__pycache__
+**/__pycache__/
 migrations
 README.md

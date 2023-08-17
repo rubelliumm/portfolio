@@ -1,0 +1,373 @@
+/*************circular details page css***********/
+.circular-details-container {
+    width: 100%;
+    height: fit-content;
+    background-color: aquamarine;
+}
+
+.circular-details-container .heading {
+    background-color: #8294a4;
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    padding: 5px;
+    margin: 10px 0px;
+}
+
+.circular-details-container .logo img {
+    height: 300px;
+    width: 300px;
+}
+
+.circular-details-container .info {
+    background-color: #8294a4;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+}
+
+.circular-details-container .desc {
+    background-color: aquamarine;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+
+}
+
+.circular-details-container .more-details {
+    padding: 10px;
+    font-size: large;
+}
+
+.circular-details-container .more-details ul {
+    padding: 10px;
+}
+
+.circular-details-container .more-details ul li {
+    margin: 10px 0px;
+}
+
+.circular-details-container .more-details ul li span {
+    background-color: lawngreen;
+    padding: 3px;
+}
+
+.circular-details-container .save-icon i {
+    margin-left: 10px;
+    font-size: inherit;
+}
+
+.pdf-file {
+    height: 100rem;
+}
+
+/*************circular details page css ends***********/
+.saved-circular-list {
+    padding: 20px;
+}
+
+.saved-circular-list .circular {
+    padding: 20px;
+}
+
+.saved-circular-list .circular ul {
+    padding: 10px;
+    list-style: lower-alpha;
+    margin: 10px 0px;
+}
+
+.saved-circular-list .circular ul li {
+    margin: 10px 0px;
+}
+
+.individualcicular {
+    height: fit-content;
+    width: 100%;
+
+}
+
+.individualcicular .heading i {
+    font-size: xx-large;
+    color: darkblue;
+}
+
+/**********allcircular page css**********************/
+.allcircular {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.allcircular .allcircular-heading {
+    margin: 5px 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.allcircular .allcircular-heading>* {
+    width: fit-content;
+}
+
+.allcircular .allcircular-list {
+    background-color: #8294a4;
+    margin: 1rem 0rem;
+}
+
+.allcircular .allcircular-list .column {
+    margin: 1rem 2rem;
+    background-color: #fb5b5b;
+}
+
+
+/* ------------------all circular page css ends------------ */
+.individualcircularrow {
+    overflow: hidden;
+    height: 20vh;
+    width: 100%;
+    background-color: antiquewhite;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.individualcircularrow .col-md-6 {
+    border: 1px solid black;
+}
+
+.individualcircularrow:hover {
+    background-color: #b2ffcc;
+}
+
+.individualcircularrow h1 {
+    font-size: x-large;
+    margin: 20px 0px 0px 0px;
+}
+
+/*this icon is for save icon*/
+.save-icon i {
+    margin-left: auto;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.individualcircularrow .circular_details {
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+/*this icon is details 3 icon inside*/
+.circular_details i {
+    margin-right: 10px;
+    font-size: medium;
+}
+
+.circular_details p {
+    font-size: large;
+    margin-bottom: 0px;
+}
+
+.circular_start_and_end_date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.circular_start_and_end_date p {
+    margin-bottom: 0px;
+    padding: 0px 5px 0px 5px;
+    font-size: large;
+}
+
+.circular_start_and_end_date .start_date {
+    background-color: lime;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.circular_start_and_end_date .end_date {
+    background-color: #fb5b5b;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/*end of all circular page css*/
+
+
+.circularimages {
+    width: 100%;
+    height: fit-content;
+}
+
+.circularimages .image {
+    width: 100%;
+    height: fit-content;
+}
+
+.circularimages .image img {
+    width: 100%;
+}
+
+/**************job navbar starts************************/
+.jobnavbar {
+    display: block;
+    height: fit-content;
+
+}
+
+.jobnavbar .job-nav-heading {
+    margin: auto;
+
+}
+
+.jobnavbar ul {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.jobnavbar ul.active {
+    display: block;
+}
+
+.jobapp-nav-heading {
+    margin: 1rem auto;
+}
+
+
+.jobnavbar ul>a:hover,
+.navbar-dropdown:hover,
+.jobnavbar ul li:hover {
+    background-color: antiquewhite;
+}
+
+.jobnavbar ul>* {
+    font-size: large;
+}
+
+
+.jobnavbar ul .jobnavbar-list li,
+.jobnavbar ul .jobnavbar-list .navbar-dropdown {
+    color: #337ab7;
+    margin: 1rem 2rem;
+    padding: 1rem;
+}
+
+.jobnavbar ul .jobnavbar-list li i {
+    margin-right: 1rem;
+}
+
+.navbar-dropdown .dropdown-btn {
+    color: inherit;
+    border: none;
+    background-color: inherit;
+}
+
+.navbar-dropdown .dropdown-btn i.fa-caret-down {
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+.navbar-dropdown .dropdown-btn a {
+    text-decoration: none;
+    color: inherit;
+    font-size: large;
+}
+
+.navbar-dropdown .dropdown-btn i {
+    margin-right: 5px;
+    color: inherit;
+    font-size: large;
+}
+
+.navbar-dropdown .dropdown-content {
+    position: absolute;
+    display: none;
+    background-color: floralwhite;
+    width: fit-content;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+.navbar-dropdown .dropdown-content a li {
+    margin: 1rem 0px;
+    padding: 1rem;
+}
+
+.navbar-dropdown .dropdown-content a li:hover {
+    background-color: #a2c7e8;
+
+}
+
+.jobnavbar-toggle {
+    position: absolute;
+    top: 105px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    display: block;
+}
+
+
+@media screen and (min-width: 768px) {
+    .jobnavbar-toggle {
+        display: none;
+    }
+
+    .jobnavbar .jobapp-nav-heading {
+        display: none;
+    }
+}
+
+/******************************end of jobnavbar****************************************/
+
+.homepage-main .top-row {
+    background-color: aliceblue;
+    height: 25vh;
+    margin: 1rem 0rem;
+
+}
+
+.homepage-main .top-row .features {
+    /* background-color: #a2c7e8; */
+    margin: 0px 10px;
+
+}
+
+.homepage-main .row-main {
+    background-color: aquamarine;
+}
+
+.homepage-main .row-main .featured {
+    border: 2px solid black;
+    margin-left: 10px;
+    height: fit-content;
+}
+
+.homepage-main .row-main .featured .featured-text {
+    background-color: black;
+    color: white;
+}
+
+
+.row-main .sidebar {
+    background-color: blueviolet;
+}
+
+.row-main .sidebar .sidebar-heading p {
+    text-align: center;
+    margin: 5px 0px;
+}
+
+.circular {
+    background-color: yellow;
+    margin: 5px 0px;
+    padding: 10px;
+}
+
+.details .more-details {
+    background-color: #88abca;
+    margin-top: 10px;
+}
